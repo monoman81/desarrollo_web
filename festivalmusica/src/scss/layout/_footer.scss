@@ -1,0 +1,14 @@
+@use "base/variables" as v;
+
+.contenedor-footer {
+  background-color: v.$rosa;
+  padding: 1.5rem 0;
+
+  p {
+    color: v.$blanco;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.6rem;
+  }
+
+}

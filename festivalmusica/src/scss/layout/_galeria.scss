@@ -1,0 +1,86 @@
+@use "sass:color";
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.galeria {
+
+  @include m.contenedor;
+
+
+  &-imagenes {
+
+    @include m.grid(1, 2rem);
+
+    @include m.telefono {
+      @include m.grid(2, 2rem);
+    }
+
+    @include m.tablet {
+      @include m.grid(3, 2rem);
+    }
+
+    @include m.desktop {
+      @include m.grid(4, 2rem);
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+  }
+
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(v.$negro, .5);
+  display: grid;
+  place-items: center;
+  animation: fadeIn .5s ease-in;
+
+  &.fade-out {
+    animation: fadeOut .5s ease-in forwards;
+  }
+
+  &-cerrar {
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  img {
+    max-width: 100rem;
+  }
+
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadeOut {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
