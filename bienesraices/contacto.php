@@ -1,4 +1,7 @@
-<?php include("includes/templates/header.php") ?>
+<?php 
+    require "includes/funciones.php";
+    incluirTemplate("header");
+?>
     <main class="contenedor seccion">
         <h1>Contacto</h1>
         <picture>
@@ -14,7 +17,7 @@
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" placeholder="Tu Nombre">
 
-                <label for="email">Nombre</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Tu Email">
 
                 <label for="tel">Telefono</label>
@@ -58,4 +61,4 @@
             <input type="submit" value="Enviar" class="boton-verde">
         </form>
     </main>
-<?php include("includes/templates/footer.php") ?>
+<?php incluirTemplate("footer"); ?>
