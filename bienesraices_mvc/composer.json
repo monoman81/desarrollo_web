@@ -1,0 +1,21 @@
+{
+    "name": "carlosp/bienesraices_poo",
+    "description": "BienesRaices con POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Carlos Rene Ponce Novelo",
+            "email": "crpn81@yahoo.com.mx"
+        }
+    ],
+    "require": {
+        "intervention/image": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\": "./models/",
+            "MVC\\": "./",
+            "Controllers\\": "./controllers"
+        }
+    }
+}
