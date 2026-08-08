@@ -22,7 +22,7 @@
     <header class="header <?php echo $inicio ? "inicio" : "" ?>">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="index.php">
+                <a href="/">
                     <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
                 <div class="mobile-menu">
@@ -32,14 +32,14 @@
                 <div class="derecha">
                     <img src="/build/img/dark-mode.svg" alt="dark mode" class="dark-mode-boton">
                     <nav class="navegacion">
-                        <a href="/nosotros.php">Nosotros</a>
-                        <a href="/anuncios.php">Anuncios</a>
-                        <a href="/blog.php">Blog</a>
-                        <a href="/contacto.php">Contacto</a>
+                        <a href="/nosotros">Nosotros</a>
+                        <a href="/propiedades">Anuncios</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/contacto">Contacto</a>
                         <?php if ($auth): ?>
-                            <a href="cerrar-sesion.php">Cerrar Sesion</a>
+                            <a href="/logout">Cerrar Sesion</a>
                         <?php else: ?>
-                            <a href="login.php">Iniciar Sesion</a>
+                            <a href="/login">Iniciar Sesion</a>
                         <?php endif ?>
                     </nav>
                 </div>
@@ -55,10 +55,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="/nosotros.php">Nosotros</a>
-                <a href="/anuncios.php">Anuncios</a>
-                <a href="/blog.php">Blog</a>
-                <a href="/contacto.php">Contacto</a>
+                <a href="/nosotros">Nosotros</a>
+                <a href="/propiedades">Anuncios</a>
+                <a href="/blog">Blog</a>
+                <a href="/contacto">Contacto</a>
             </nav>
         </div>
         <p class="copyright">Todos los derechos reservados <?php echo date('Y') ?> &copy;</p>

@@ -114,7 +114,7 @@ class ActiveRecord {
     }
 
     public function setImagen($imagen) {
-        if (is_null($this->id)) {
+        if (!is_null($this->id)) {
             $this->borrarImagen();
         }
         if ($imagen)
