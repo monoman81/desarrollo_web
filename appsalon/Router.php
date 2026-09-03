@@ -21,7 +21,7 @@ class Router
     {
         
         // Proteger Rutas...
-        session_start();
+        //session_start();
 
         // Arreglo de rutas protegidas...
         // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
@@ -59,6 +59,7 @@ class Router
         // entonces incluimos la vista en el layout
         include_once __DIR__ . "/views/$view.php";
         $contenido = ob_get_clean(); // Limpia el Buffer
+        //debuguear($contenido);
         include_once __DIR__ . '/views/layout.php';
     }
 }

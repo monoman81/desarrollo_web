@@ -2,8 +2,8 @@
 <p class="descripcion-pagina">
     Se te olvido tu password? Ingresa tu email registrado para instrucciones para reestablecer la cuenta.
 </p>
-
-<form action="/crear-cuenta" method="POST" class="formulario">
+<?php include_once __DIR__ . "/../templates/alertas.php" ?>
+<form action="/olvide" method="POST" class="formulario">
     <div class="campo">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Tu email registrado" />

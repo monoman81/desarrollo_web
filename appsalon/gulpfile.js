@@ -53,7 +53,7 @@ function procesarImagenes(file, outputSubDir) {
     if (extName.toLowerCase() === '.svg') {
         // If it's an SVG file, move it to the output directory
         const outputFile = path.join(outputSubDir, `${baseName}${extName}`);
-    fs.copyFileSync(file, outputFile);
+        fs.copyFileSync(file, outputFile);
     } else {
         // For other image formats, process them with sharp
         const outputFile = path.join(outputSubDir, `${baseName}${extName}`);
