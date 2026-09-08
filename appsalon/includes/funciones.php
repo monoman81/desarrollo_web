@@ -18,3 +18,9 @@ function isAuth() : void {
         header("Location: /");
     }
 }
+
+function isAdmin() : void {
+    if (!isset($_SESSION["logged"]) || !isset($_SESSION["admin"]) || $_SESSION["admin"] !== "1") {
+        header("Location: /");
+    }
+}
