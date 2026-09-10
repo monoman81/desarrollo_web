@@ -71,7 +71,7 @@ const paginador = () => {
 
 const consultarAPI = async () => {
     try {
-        const url = "http://appsalon.test/api/servicios";
+        const url = `${location.origin}/api/servicios`;
         const result = await fetch(url);
         const servicios = await result.json();
         mostrarServicios(servicios);
@@ -210,7 +210,7 @@ const mostrarResumen = () => {
 
 const reservarCita = async () => {
     const {userId, fecha, hora} = cita;
-    const url = 'http://appsalon.test/api/citas';
+    const url = `${location.origin}/api/citas`;
     const datos = new FormData();
     datos.append("usuarioId", userId);
     datos.append("fecha", fecha);
