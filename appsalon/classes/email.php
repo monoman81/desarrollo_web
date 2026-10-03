@@ -19,6 +19,7 @@ class Email
 
     public function enviarConfirmacion()
     {
+        debuguear($_ENV);
         $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->SMTPAuth = true;
@@ -38,8 +39,8 @@ class Email
         $contenido = <<<MAIL
             <html>
             <body>
-            <p>Hola <strong>$this->nombre</strong> has creado tu cuenta en App Salon, solo debes de confirmarla presionando el siguiente enlace: </p>
-            <p>Presiona aqui: <a href="$_ENV['APP_URL']/confirmar-cuenta?token=$this->token">Confirmar tu Cuenta</a></p>
+            <p>Hola <strong>{$this->nombre}</strong> has creado tu cuenta en App Salon, solo debes de confirmarla presionando el siguiente enlace: </p>
+            <p>Presiona aqui: <a href="{$_ENV['APP_URL']}/confirmar-cuenta?token={$this->token}">Confirmar tu Cuenta</a></p>
             <p>Si tu no creaste esta cuenta, puedes ignorar este mensaje</p>
             </body>
             </html>
@@ -70,8 +71,8 @@ class Email
         $contenido = <<<MAIL
             <html>
             <body>
-            <p>Hola <strong>$this->nombre</strong> para reestablecer tu password haz click en el siguiente enlace: </p>
-            <p>Presiona aqui: <a href="$_ENV['APP_URL']/recuperar?token=$this->token">Reestablecer Password</a></p>
+            <p>Hola <strong>{$this->nombre}</strong> para reestablecer tu password haz click en el siguiente enlace: </p>
+            <p>Presiona aqui: <a href="{$_ENV['APP_URL']}/recuperar?token={$this->token}">Reestablecer Password</a></p>
             <p>Si tu no solicitaste este cambio, puedes ignorar este mensaje</p>
             </body>
             </html>
